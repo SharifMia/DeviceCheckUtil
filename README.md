@@ -1,18 +1,16 @@
-DeviceCheckUtil
-
 DeviceCheckUtil is a lightweight, secure Android library that enforces strict 1-to-1 hardware locking for your Firebase apps.
 
 It seamlessly checks if a user's account is already linked to a specific physical device, preventing users from logging into the same account across multiple devices or sharing accounts. It uses Firebase Auth and Firestore with atomic batch writes to ensure secure, two-way verification.
 
-🚀 Features
+🚀 Features:-
 
-    Automatic Device ID Generation: Securely fetches the unique Android Hardware ID.
+Automatic Device ID Generation: Securely fetches the unique Android Hardware ID.
 
-    Two-Way Verification: Ensures the user matches the device, and the device matches the user.
+Two-Way Verification: Ensures the user matches the device, and the device matches the user.
 
-    Atomic Link Creation: Safely binds new devices using Firestore WriteBatch.
+Atomic Link Creation: Safely binds new devices using Firestore WriteBatch.
 
-    Built-in Security Dialog: Automatically handles mismatch scenarios by showing an un-cancelable alert and logging the user out.
+Built-in Security Dialog: Automatically handles mismatch scenarios by showing an un-cancelable alert and logging the user out.
 
     
 🛠 Prerequisites
@@ -52,18 +50,18 @@ Call the utility right after your user successfully logs in, or on your app's ma
 
 Pass in your Activity context, your FirebaseAuth instance, and the listener to handle the result:
 
-import com.sharifmia.devicechecker.DeviceCheckUtil;
-import com.google.firebase.auth.FirebaseAuth;
-
-// ... inside your Activity ...
-
-FirebaseAuth mAuth = FirebaseAuth.getInstance();
-
-DeviceCheckUtil.performDeviceCheck(this, mAuth, new DeviceCheckUtil.DeviceCheckListener() {
-    @Override
-    public void onCheckSuccess(boolean isNewDevice) {
-        // The check passed! The user is allowed to proceed.
-        Log.d("App", "Device check successful.");
+    import com.sharifmia.devicechecker.DeviceCheckUtil;
+    import com.google.firebase.auth.FirebaseAuth;
+    
+    // ... inside your Activity ...
+    
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    
+    DeviceCheckUtil.performDeviceCheck(this, mAuth, new DeviceCheckUtil.DeviceCheckListener() {
+        @Override
+        public void onCheckSuccess(boolean isNewDevice) {
+            // The check passed! The user is allowed to proceed.
+            Log.d("App", "Device check successful.");
 
         if (isNewDevice) {
             Toast.makeText(MainActivity.this, "Device registered successfully!", Toast.LENGTH_SHORT).show();
