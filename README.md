@@ -1,0 +1,1 @@
+Option 2: Use GitHub Packages (Free but advanced): GitHub has its own built-in package registry that allows private libraries for free. However, setting it up requires you to generate Personal Access Tokens and add special authentication code into your app's build.gradle to prove you are the owner.
