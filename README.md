@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/SharifMia/DeviceCheckUtil.svg)](https://jitpack.io/#SharifMia/DeviceCheckUtil)
+ 
 DeviceCheckUtil is a lightweight, secure Android library that enforces strict 1-to-1 hardware locking for your Firebase apps.
 
 It seamlessly checks if a user's account is already linked to a specific physical device, preventing users from logging into the same account across multiple devices or sharing accounts. It uses Firebase Auth and Firestore with atomic batch writes to ensure secure, two-way verification.
@@ -26,7 +28,6 @@ Since this library relies on Firebase, your app must have the following already 
     deviceLocks (Maps Device ID -> User UID)
 
  📦 Installation
- [![](https://jitpack.io/v/SharifMia/DeviceCheckUtil.svg)](https://jitpack.io/#SharifMia/DeviceCheckUtil)
 
 Step 1: Add the JitPack repository to your settings.gradle (or project-level build.gradle for older projects): 
 
