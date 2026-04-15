@@ -15,17 +15,16 @@ Atomic Link Creation: Safely binds new devices using Firestore WriteBatch.
 Built-in Security Dialog: Automatically handles mismatch scenarios by showing an un-cancelable alert and logging the user out.
 
     
-🛠 Prerequisites
+🛠 Prerequisites:-
 
 Since this library relies on Firebase, your app must have the following already set up:
 
-    Firebase Authentication
-
-    Firebase Firestore Your Firestore database will automatically populate with two collections when the library runs:
-
-    deviceLinks (Maps User UID -> Device ID)
-
-    deviceLocks (Maps Device ID -> User UID)
+   Firebase Authentication
+   
+   Firebase Firestore Your Firestore database will automatically populate with two collections when the library runs:
+   
+   deviceLinks (Maps User UID -> Device ID)
+   deviceLocks (Maps Device ID -> User UID)
 
  📦 Installation
 
@@ -70,7 +69,7 @@ Pass in your Activity context, your FirebaseAuth instance, and the listener to h
 
         // TODO: Proceed with loading your user data
         // userAccount();
-        // checkDailyIncome();
+       
     }
 
     @Override
